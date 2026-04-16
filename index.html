@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+
+<!-- ✅ MOST IMPORTANT FOR MOBILE -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Message Request</title>
 
 <style>
@@ -13,10 +17,12 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    padding: 10px; /* ✅ prevents edge touching on phones */
   }
 
   .chat-box {
-    width: 360px;
+    width: 100%;
+    max-width: 360px; /* ✅ responsive instead of fixed */
     background: rgb(24, 24, 24);
     border-radius: 20px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
@@ -44,6 +50,7 @@
 
   .name {
     font-weight: bold;
+    font-size: 4vw; /* ✅ scales on mobile */
   }
 
   /* CHAT AREA */
@@ -70,13 +77,14 @@
   }
 
   .msg {
-    padding: 10px 14px;
+    padding: 12px 16px;
     border-radius: 18px;
     max-width: 75%;
     font-size: 14px;
     opacity: 0;
     transform: translateY(20px);
     animation: slideIn 0.5s forwards;
+    word-wrap: break-word; /* ✅ prevents overflow */
   }
 
   .left {
@@ -94,16 +102,18 @@
   .buttons {
     display: flex;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
     padding: 15px;
+    flex-wrap: wrap; /* ✅ prevents squishing */
   }
 
   button {
-    padding: 10px 18px;
+    padding: 12px 20px; /* ✅ bigger for fingers */
     border: none;
-    font-size: 14px;
+    font-size: 16px;
     cursor: pointer;
     transition: 0.2s;
+    border-radius: 8px;
   }
 
   #acceptBtn {
@@ -175,8 +185,11 @@ function moveNo() {
   let btn = document.getElementById("rejectBtn");
 
   if (count < 4) {
-    let x = Math.random() * 120 - 60;
-    let y = Math.random() * 40 - 20;
+    let maxX = 100;
+    let maxY = 50;
+
+    let x = Math.random() * maxX - maxX / 2;
+    let y = Math.random() * maxY - maxY / 2;
 
     btn.style.transform = `translate(${x}px, ${y}px)`;
   } else {
