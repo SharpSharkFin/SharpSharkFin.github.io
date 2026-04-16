@@ -1,39 +1,114 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>90</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>90</title>
+
+<style>
+  body {
+    margin: 0;
+    font-family: "Times New Roman", Times, serif;
+    background-color: antiquewhite;
+    color: black;
+    text-align: center;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: clamp(32px, 6vw, 50px);
+  }
+
+  p {
+    font-size: clamp(18px, 4.5vw, 45px);
+    line-height: 1.6;
+    padding: 10px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .float-left {
+    float: left;
+    width: 40%;
+    margin: 10px 10px 10px 0;
+  }
+
+  .float-right {
+    float: right;
+    width: 40%;
+    margin: 10px 0 10px 10px;
+  }
+
+  /* MOBILE FIX */
+  @media (max-width: 768px) {
+    .float-left,
+    .float-right {
+      float: none;
+      display: block;
+      width: 100%;
+      margin: 10px auto;
+    }
+
+    p {
+      text-align: left;
+    }
+  }
+</style>
 </head>
-<body style="text-align:center; margin-top:100px; font-family:Times New Roman, Times, serif;color: rgb(0, 0, 0);background-color: antiquewhite;">
-  <h1 style="font-size: 50px;">90 days with..</h1>
-  <img src="burger.jpg" style="float:right; margin-left:10px; width:250px;">
-  <img src="shoulder.jpg" style="float:left; margin-right:10px; width:250px;">
-  <p style="font-size: 45px;">
-  In the Philippines, a general average of 90 means that<br>you made into "with honours." <br><br>
 
-<i>Je peux dire que passer 90 jours avec vous est un honneur.</i><br><br></p>
+<body>
+<div class="container">
 
-<img src="1.png" style="float:left; margin-right:10px; width:250px;"><br> 
-<p style="font-size: 45px; text-align:justify; padding:30px;">
-  I've always thought that being called a star means being exceptional. 
-  Maybe because ever since g7, I've been surrounded by people who are star section worthy.
-  3 years with students who proved their worth through excellence alone. 
-  But even then, I felt like I didn’t fully understand what it truly meant. <br><br></p>
+  <h1>90 days with..</h1>
 
-<p style="font-size: 45px; text-align:center; padding:30px;">
-Until I met <i>you.</i><br><br></p>
+  <img src="burger.jpg" class="float-right">
+  <img src="shoulder.jpg" class="float-left">
 
-<p style="font-size: 45px; text-align:justify; padding:30px;">
-I now realize that being a star is not just about talents or achievements. 
-Instead, being someone's light in their darkest moments, shining in their own way and gently guiding others when they feel lost.<br><br>
+  <p>
+    In the Philippines, a general average of 90 means that<br>
+    you made into "with honours."<br><br>
 
-You are that kind of star.<br><br>
+    <i>Je peux dire que passer 90 jours avec vous est un honneur.</i>
+  </p>
 
-You're the person I trust the most, proven by the fact that I can cry to you even if it's about the stupidest things. 
-Thank you for being patient with me, being honest with me, and being careful with me. 
-No matter what the universe throws at us, I know we’ll stay strong.
-<i>I love you, always.</i><br><br> 
+  <img src="1.png" class="float-left">
 
-<img src="ragebaityes.png" style="float:right; width:350px;"><br>
-I would overcome immense distances to reach you, my <i>star</i>.</p>
+  <p style="text-align: justify;">
+    I've always thought that being called a star means being exceptional.
+    Maybe because ever since g7, I've been surrounded by people who are star section worthy.
+    3 years with students who proved their worth through excellence alone.
+    But even then, I felt like I didn’t fully understand what it truly meant.
+  </p>
+
+  <p>Until I met <i>you.</i></p>
+
+  <p style="text-align: justify;">
+    I now realize that being a star is not just about talents or achievements.
+    Instead, being someone's light in their darkest moments, shining in their own way and gently guiding others when they feel lost.<br><br>
+
+    You are that kind of star.<br><br>
+
+    You're the person I trust the most, proven by the fact that I can cry to you even if it's about the stupidest things.
+    Thank you for being patient with me, being honest with me, and being careful with me.
+    No matter what the universe throws at us, I know we’ll stay strong.<br>
+
+    <i>I love you, always.</i>
+  </p>
+
+  <img src="ragebaityes.png" class="float-right">
+
+  <p>
+    I would overcome immense distances to reach you, my <i>star</i>.
+  </p>
+
+</div>
 </body>
 </html>
